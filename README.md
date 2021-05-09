@@ -1,3 +1,3 @@
-# [https://github.com/YelenaKo/moviesearch](https://github.com/YelenaKo/moviesearch).
+# [https://yelenako.github.io/moviesearch/](https://yelenako.github.io/moviesearch/).
 
 
