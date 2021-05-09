@@ -13,12 +13,9 @@ class App extends Component {
       movie: "&type=movie",
       titleForSearch: "&s="
     },
-
     movies: [],
-
     nominantList: [],
     isNominantAble: true, 
-
     errorMessage: "",
     messageStyle: "",
   }
@@ -29,8 +26,7 @@ class App extends Component {
 
   submitHandler = (e) => {
 
-    e.preventDefault();
-    
+    e.preventDefault();    
     const searchUrl = this.state.basicUrl + 
                       this.state.apikey + 
                       this.state.searchParameter.movie + 
@@ -46,8 +42,7 @@ class App extends Component {
             this.setState({errorMessage: ""})
           }else {
           this.setState({errorMessage: " Movie not found! "})
-          this.setState({messageStyle: "#181836"})
-          
+          this.setState({messageStyle: "#181836"})          
         }})
       }else{
       this.setState({errorMessage: "Please, enter the movie name " })
@@ -76,8 +71,7 @@ class App extends Component {
         <header className="app-header">
           <h1>The Shoppies:</h1>
         </header>
-        <main>
-          
+        <main>          
           <Search submitHandler = {this.submitHandler}  onChangeHandler = {this.onChangeHandler} errorMessage = {this.state.errorMessage} messageStyle= {this.state.messageStyle}/>
           <section className = "app-movies-container">
             <Results movieList = {this.state.movies} clickNominantHandler = {this.clickNominantHandler} nominantList = {this.state.nominantList} />

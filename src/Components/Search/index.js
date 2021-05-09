@@ -7,8 +7,7 @@ class Search extends Component {
         this.state = { 
             movies:[],
         } 
-    }
-    
+    }    
     render() { 
         return ( 
             <div className = "search-container">

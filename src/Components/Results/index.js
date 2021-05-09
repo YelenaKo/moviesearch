@@ -9,10 +9,8 @@ class Results extends Component {
     }
 
     render() { 
-        return ( 
-            
-            <div className = "results-list">
-                
+        return (             
+            <div className = "results-list">                
                 {this.props.movieList.map( element=> 
                 <div key = {element.imdbID} className = "results-item"> 
                     <div className="results-img" style={{ backgroundImage: `url(${element.Poster})`}}></div> 
