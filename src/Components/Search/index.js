@@ -19,6 +19,7 @@ class Search extends Component {
                             type = "text" 
                             id = "moviename" 
                             name = "moviename" 
+                            value = {this.props.moviename}
                             placeholder = "Enter a Movie Name" 
                             onChange ={this.props.onChangeHandler} 
                         />

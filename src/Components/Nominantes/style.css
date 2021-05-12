@@ -10,6 +10,14 @@
 .nominantes-list:empty {
     background-color: transparent;
 }
+.nominantes-list:not(:empty)::before {
+    content: "Nominations";
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 .nominantes-item {
     display: flex;
     justify-content: space-between;
@@ -35,4 +43,20 @@
     background: transparent;
     border: none;
     cursor: pointer;
+}
+@media screen and (max-width: 1024px){
+    .nominantes-list {
+        width: 100%;
+    }
+    .nominantes-list:not(:empty)::before {
+    background: #181836;
+    background: linear-gradient(90deg, #181836 0%, #00002c 33%, #00002c 67%, #181836 100%);
+    }
+}
+@media screen and (max-width: 767px){
+    .nominantes-img {
+        max-width: 30%;
+        width: 70px;
+        height: 100px;
+    }
 }

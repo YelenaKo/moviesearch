@@ -26,7 +26,8 @@ class App extends Component {
 
   submitHandler = (e) => {
 
-    e.preventDefault();    
+    e.preventDefault();   
+
     const searchUrl = this.state.basicUrl + 
                       this.state.apikey + 
                       this.state.searchParameter.movie + 
@@ -35,20 +36,23 @@ class App extends Component {
 
     if (this.state.movieName) {
     axios.get(searchUrl)
-        .then( res =>{
-          if (res.data.Search){
-            const result = res.data.Search
-            this.setState({movies: result})
-            this.setState({errorMessage: ""})
-          }else {
-          this.setState({errorMessage: " Movie not found! "})
-          this.setState({messageStyle: "#181836"})          
-        }})
-      }else{
-      this.setState({errorMessage: "Please, enter the movie name " })
-      this.setState({messageStyle: "#181836"})
+      .then( res =>{
+        const result = res.data.Search
+        if (res.data.Search){
+          this.setState({movies: result})
+          this.setState({errorMessage: ""}) 
+        } else {
+        this.setState({errorMessage: " Movie not found! "})
+        this.setState({messageStyle: "#181836"})  
+        this.setState({movies: []})     
+      }})
+    } else {
+    this.setState({errorMessage: "Please, enter the movie name " })
+    this.setState({messageStyle: "#181836"})
+    this.setState({movies: []})
     }
   }
+
 
   clickNominantHandler = async (movie) => {
     if(this.state.nominantList.length <= 4 ){

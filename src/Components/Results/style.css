@@ -9,6 +9,14 @@
 .results-list:empty {
     background-color: transparent;
 }
+.results-list:not(:empty)::before  {
+    content: "Search Results";
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 .results-item {
     display: flex;
     justify-content: space-between;
@@ -51,4 +59,19 @@
     75% { fill: #3c7a02; }
     100% { fill: #ff0000; }
 }
-
+@media screen and (max-width: 1024px){
+    .results-list {
+        width: 100%;
+    }
+    .results-list:not(:empty)::before {
+        background: #181836;
+        background: linear-gradient(90deg, #181836 0%, #00002c 33%, #00002c 67%, #181836 100%);
+        }
+}
+@media screen and (max-width: 767px){
+    .results-img {
+        max-width: 30%;
+        width: 70px;
+        height: 100px;
+    }
+}
