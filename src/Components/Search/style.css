@@ -33,8 +33,6 @@
     background: #be3434;
     transition: 1s ease-in-out;
 }
-
-
 .search-error-message {
     height: 70px;
     display: flex;

@@ -21,7 +21,6 @@ p{
   font-size: .8em;
   color: #aaaaaa;
 }
-
 header{
   text-align: center;
 }
@@ -39,7 +38,6 @@ section:empty {
   width: 70vw;
   padding: 1em;
 }
-
 @media screen and (max-width: 1024px){
   .app-movies-container{
     flex-direction: column-reverse;

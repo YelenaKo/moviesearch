@@ -50,7 +50,6 @@
     animation: change 6s forwards infinite; animation-delay: .5s;
     transition: 5s ease-in-out;
 }
-
 @keyframes change 
 {
     0% { fill: #fc1515; }
